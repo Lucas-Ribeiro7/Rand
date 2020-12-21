@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
     <title>Aleatório</title>
 </head>
 <body>
-    <div>
+    <div class="processo">
         <h2>Número Aleatorio</h2>
         <p>Coloque qualquer de X á Y e vamos gerar um numero entre X e Y</p>
         <form action="" method="GET">
@@ -19,7 +20,7 @@
             <input type="submit" value="Gerar">
         </form>
     </div>
-    <div>
+    <div class="resultado">
         <?php
             if(isset($_GET['number_x']) && isset($_GET['number_y'])){
                 $numeroX = $_GET['number_x'];
@@ -30,7 +31,7 @@
             function numAleatorio($num1, $num2){
                 //echo "<p>Entrou</p>";
                 $numero = rand($num1, $num2);
-                echo "<p>$numero</p>";
+                echo "<p>Um número aleatório entre $num1 e $num2 gerado foi: <n>$numero</n></p>";
             } 
         ?>
     </div>
